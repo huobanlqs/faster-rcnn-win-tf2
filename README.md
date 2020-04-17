@@ -12,13 +12,13 @@ If you find a solution to an existing issue in the code, please send a PR for it
 
 2.Checkout this branch
 
-3.Install python packages (cython, python-opencv,easydict) by running
-`pip install -r requirements.txt`
+3.Install python packages (cython, python-opencv,easydict) by running  
+`pip install -r requirements.txt`  
 (if you are using an environment manager system such as `conda` you should follow its instruction)
 
-4.Go to ./data/coco/PythonAPI
-Run `python setup.py build_ext --inplace`
-Run `python setup.py build_ext install`
+4.Go to ./data/coco/PythonAPI  
+Run `python setup.py build_ext --inplace`  
+Run `python setup.py build_ext install`  
 Go to ./lib/utils and run `python setup.py build_ext --inplace`
 
 5.Follow [these instructions](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) to download PyCoco database. The final structure has to look like

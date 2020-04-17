@@ -4,3 +4,4 @@ easydict
 Pillow
 matplotlib
 scipy
+tf-slim

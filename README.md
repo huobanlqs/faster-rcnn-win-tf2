@@ -16,17 +16,23 @@ If you find a solution to an existing issue in the code, please send a PR for it
 `pip install -r requirements.txt`  
 (if you are using an environment manager system such as `conda` you should follow its instruction)
 
-4.Go to ./data/coco/PythonAPI  
+4.This branch need to install the tf-slim package to replace some func in the code.  
+But directly using `pip install tf-slim` may not solve this problem.  
+We need to download from [https://github.com/google-research/tf-slim](https://github.com/google-research/tf-slim) or  
+go to ./tf-slim-master
+Run `python setup.py install`
+
+5.Go to ./data/coco/PythonAPI  
 Run `python setup.py build_ext --inplace`  
 Run `python setup.py build_ext install`  
 Go to ./lib/utils and run `python setup.py build_ext --inplace`
 
-5.Follow [these instructions](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) to download PyCoco database. The final structure has to look like
+6.Follow [these instructions](https://github.com/rbgirshick/py-faster-rcnn#beyond-the-demo-installation-for-training-and-testing-models) to download PyCoco database. The final structure has to look like
 `\data\VOCdevkit2007\VOC2007`
 
-6.Download pre-trained VGG16 from [here](http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz) and place it as `data\imagenet_weights\vgg16.ckpt`.  
+7.Download pre-trained VGG16 from [here](http://download.tensorflow.org/models/vgg_16_2016_08_28.tar.gz) and place it as `data\imagenet_weights\vgg16.ckpt`.  
 For rest of the models, please check [here](https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models)
 
-7.Run train.py
+8.Run train.py
 
 Notify me if there is any issue found.
